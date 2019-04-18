@@ -33,12 +33,6 @@ import com.reuniware.gpstosms.Utils.Companion.storeLastKnownLocationDate
 import kotlinx.android.synthetic.main.activity_maps.*
 import java.text.DateFormat
 import java.util.*
-import com.google.android.gms.ads.*
-
-
-// ID de l'application : ca-app-pub-7445120605266570~1147951323
-// ca-app-pub-7445120605266570~1147951323
-// ca-app-pub-7445120605266570/5442419559
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, SensorEventListener {
 
@@ -51,40 +45,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, SensorEventListene
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
-
-        MobileAds.initialize(this, "ca-app-pub-7445120605266570~1147951323");
-
-        mAdView = findViewById(R.id.adView)
-        var adRequest = AdRequest.Builder()
-        adRequest.addTestDevice("D9B06214A6D53D02C41E7A00D6F399F7")
-
-        mAdView.loadAd(adRequest.build())
-
-        mAdView.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
-                Log.d("gpstosms", "onAdLoaded()")
-            }
-
-            override fun onAdFailedToLoad(errorCode : Int) {
-                // Code to be executed when an ad request fails.
-            }
-
-            override fun onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
-            }
-
-            override fun onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            override fun onAdClosed() {
-                // Code to be executed when the user is about to return
-                // to the app after tapping on an ad.
-            }
-        }
-
 
         val sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         val sensorAccelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
