@@ -36,8 +36,6 @@ import java.util.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, SensorEventListener {
 
-    lateinit var mAdView : AdView
-
     private lateinit var mMap: GoogleMap
     //private lateinit var database: DatabaseReference
     //val TAG = "GpsToSms"
