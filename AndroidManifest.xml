@@ -49,10 +49,6 @@
         <activity android:name="com.reuniware.gpstosms.SettingsActivity"
             android:screenOrientation="portrait" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7445120605266570~1147951323" />
-
     </application>
 
 </manifest>
